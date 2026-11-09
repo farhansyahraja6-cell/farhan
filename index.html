@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Pribadi - Farhan Syah R.</title>
     <style>
-        /* Pengaturan Dasar & Tema Warna */
         :root {
             --black: #0f0f0f;
             --gold: #d4af37;
@@ -21,21 +20,18 @@
         }
 
         body {
-            /* Gradasi elegan hitam ke abu-abu gelap dengan aksen emas */
             background: linear-gradient(135deg, var(--black) 0%, #2a2824 50%, var(--black) 100%);
             color: var(--white);
             line-height: 1.6;
             min-height: 100vh;
         }
 
-        /* Container Utama */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Header */
         header {
             text-align: center;
             margin-bottom: 50px;
@@ -58,7 +54,6 @@
             font-weight: 300;
         }
 
-        /* Grid Layout untuk Konten */
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -66,7 +61,6 @@
             margin-bottom: 50px;
         }
 
-        /* Card Style */
         .card {
             background: rgba(255, 255, 255, 0.05);
             padding: 25px;
@@ -77,5 +71,146 @@
         }
 
         .card h2 {
-            color: var
-  
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-list strong {
+            color: var(--gold-light);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: linear-gradient(45deg, var(--gold), #b5952f);
+            color: var(--black);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .gallery-section {
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            color: var(--gold);
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .scene {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .card-3d {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.6s ease-out, box-shadow 0.6s ease-out;
+            transform-style: preserve-3d;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.2);
+            background-color: var(--white);
+            padding: 10px;
+        }
+
+        .scene:hover .card-3d {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+            box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .card-3d img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Farhan Syah R.</h1>
+            <p class="subtitle">Teknisi Jaringan WiFi & Perangkat Seluler</p>
+        </header>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2>Profil & Kontak</h2>
+                <ul class="info-list">
+                    <li>
+                        <strong>Email</strong>
+                        <a href="mailto:farhansyahraja6@gmail.com" style="color: var(--white); text-decoration: none;">farhansyahraja6@gmail.com</a>
+                    </li>
+                    <li>
+                        <strong>Nomor HP / WhatsApp</strong>
+                        <span>085704401347</span>
+                    </li>
+                    <li>
+                        <strong>Alamat Lengkap</strong>
+                        <span>Tawangrejo Garum RT 01 RW 10,<br>Kecamatan Tawangsari,<br>Kabupaten Blitar</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Keterampilan</h2>
+                <div class="tags" style="margin-bottom: 30px;">
+                    <span class="tag">Pemasangan & Pembenahan WiFi</span>
+                    <span class="tag">Reparati HP</span>
+                </div>
+
+                <h2>Hobi</h2>
+                <div class="tags">
+                    <span class="tag">Sepak Bola ⚽</span>
+                    <span class="tag">Membaca 📖</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Galeri Keterampilan</h2>
+            <div class="scene">
+                <div class="card-3d">
+                    <img src="IMG-20261001-WA0018.jpg" alt="Farhan sedang bekerja">
+                </div>
+            </div>
+            <p style="margin-top: 15px; color: #aaa; font-size: 0.9em;">(Sentuh gambar untuk melihat efek 3D)</p>
+        </div>
+    </div>
+
+</body>
+</html>
